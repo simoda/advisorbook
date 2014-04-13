@@ -1,31 +1,48 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+					  
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.danski</groupId>
-	<artifactId>advisorbook</artifactId>
-	<packaging>jar</packaging>
+	<groupId>com.advisorbook</groupId>
+	<artifactId>parent</artifactId>
+	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>Financial Advisor application</name>
-	<url>http://danieljsimons.com</url>
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
+	<name>Professional Advisor application Parent POM</name>
+	<url>http://advisorbook.com.au</url>
+	
+	<modules>
+        <module>ab-dataservices</module>
+        <!-- TODO module>ab-web</module-->
+    </modules>
 
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>2.39.0</version>
-		</dependency>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
-	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.4</version>
+			</dependency>		
+		</dependencies>
+	</dependencyManagement>
 </project>
