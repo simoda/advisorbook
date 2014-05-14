@@ -20,13 +20,11 @@
 		</layout>
 	</appender>
 
-
-
-	<logger name="javabeat.net.log4j" additivity="false">
-		<level value="INFO" />
+	<root>
+		<priority value="debug" />
 		<appender-ref ref="consoleAppender" />
-		<!-- appender-ref ref="fileAppender" / -->
-	</logger>
+		<appender-ref ref="fileAppender" />
+	</root>
 
 
 </log4j:configuration>
