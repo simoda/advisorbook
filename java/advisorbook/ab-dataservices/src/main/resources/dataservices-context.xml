@@ -5,8 +5,8 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
  
  	<!-- TODO Setup proper config using properties loader etc -->
-	<bean id="advisorLoader" class="com.ab.dataservices.util.AdvisorWebLoaderImpl">
-		<property name="scrapeUrl" value="http://www.afa.asn.au/findanadviser/search"/>
+	<bean id="advisorLoader" class="com.ab.dataservices.util.AdvisorWebLoaderImpl">		
+		<property name="baseUrl" value="http://www.afa.asn.au/"/>
 	</bean>
  
 </beans>
