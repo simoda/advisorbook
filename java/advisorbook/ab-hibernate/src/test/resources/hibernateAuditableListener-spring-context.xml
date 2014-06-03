@@ -10,7 +10,7 @@
 
     
     
-    <bean id="auditingTestDAO" class="com.anz.fit.hibernate.server.impl.AuditingTestDAOImpl"/>
+    <bean id="auditingTestDAO" class="com.ab.hibernate.server.impl.AuditingTestDAOImpl"/>
     
     
 		

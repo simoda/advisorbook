@@ -26,13 +26,13 @@
 
     <!-- Need this bean name to be used, to override spring instance -->
 	<bean id="org.springframework.context.annotation.internalPersistenceAnnotationProcessor"
-		class="com.anz.fit.hibernate.jpa.support.QuietPersistenceAnnotationBeanPostProcessor" />
+		class="com.ab.hibernate.jpa.support.QuietPersistenceAnnotationBeanPostProcessor" />
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="fit" />
+		<property name="persistenceUnitName" value="advice" />
 		<property name="persistenceXmlLocation" value="classpath:/persistence.xml" />
 		<property name="dataSource" ref="pooledDataSource" />
 		<property name="jpaVendorAdapter">
