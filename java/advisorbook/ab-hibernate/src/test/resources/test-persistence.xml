@@ -1,0 +1,22 @@
+<!-- EXAMPLE persistence.xml PLEASE USE YOUR OWN called test-persistence.xml and put in the classpath-->
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="fit" transaction-type="RESOURCE_LOCAL">
+                
+        <class>com.anz.fit.hibernate.server.impl.AuditingTestEntity</class>
+		
+		<properties>
+			<property name="hibernate.archive.autodetection" value="class" />			
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.jdbc.batch_size" value="10" />
+			<property name="hibernate.ejb.event.pre-update" value="com.anz.fit.hibernate.server.impl.HibernateAuditableListener"/>
+			<property name="hibernate.ejb.event.pre-insert" value="com.anz.fit.hibernate.server.impl.HibernateAuditableListener"/>
+			<property name="hibernate.ejb.event.post-load" value="com.anz.fit.hibernate.server.impl.HibernateAuditableListener"/>
+			<property name="hbm2ddl.auto" value="create"/>
+		</properties>
+	</persistence-unit>
+
+</persistence>

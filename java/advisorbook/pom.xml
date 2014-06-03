@@ -11,6 +11,7 @@
 	<url>http://advisorbook.com.au</url>
 
 	<modules>
+		<module>ab-hibernate</module>
 		<module>ab-dataservices</module>
 		<!-- TODO module>ab-web</module -->
 	</modules>
@@ -43,6 +44,12 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>1.2.17</version>
@@ -57,6 +64,12 @@
 				<artifactId>spring-core</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
